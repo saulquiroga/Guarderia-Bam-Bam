@@ -1,10 +1,14 @@
 ﻿@{
-    Page.Title = "Escriba el título aquí";
-    //Layout = "Su página de diseño se incluye aquí";
+    Page.Title = "Inicio";
+    Layout = "~/Shared/_Layout.cshtml";
+    //Layout = "~/Shared/_Slider.cshtml";
+
+
 }
-
-<div>
-    Esta es la pagina de inicio 
-    nuevo dato
-
+<div id="slider">
+    @RenderPage("~/Shared/_Slider.cshtml")
 </div>
+<div>
+    
+</div>
+
