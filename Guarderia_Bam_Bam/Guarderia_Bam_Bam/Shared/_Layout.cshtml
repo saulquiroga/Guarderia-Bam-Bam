@@ -6,19 +6,36 @@
 
 </head>
 <body>
-  
-       
-        @if (IsSectionDefined("header"))
-        {
-            <div id="header_alt">
-                @RenderSection("header")
-            </div>
-        }
-        else
-        {
-            @RenderPage("~/Shared/_Header.cshtml")
-        } 
-    
+
+
+    @if (IsSectionDefined("header"))
+    {
+        <div id="header_alt">
+            @RenderSection("header")
+        </div>
+    }
+    else
+    {
+        @RenderPage("~/Shared/_Header.cshtml")
+    }
+    <div id="slider">
+        @RenderPage("~/Shared/_Slider.cshtml")
+    </div>
+    <div id="textos">
+        @RenderPage("~/Shared/_Textos.cshtml")
+    </div>
+
+    <div id="web">
+        @RenderPage("~/Shared/_Web.cshtml")
+    </div>
+    <div id="info">
+        @RenderPage("~/Shared/_Infodir.cshtml")
+    </div>
+    <div id="copy">
+        @RenderPage("~/Shared/_Copy.cshtml")
+    </div>
+
+
     <h1>@PageData["titulo"]</h1>
     @RenderBody()
 

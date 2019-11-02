@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@Page.Title</title>
+
+</head>
+<body>
+    @if (IsSectionDefined("header"))
+    {
+        <div id="header_alt">
+            @RenderSection("header")
+        </div>
+    }
+    else
+    {
+        @RenderPage("~/Shared/_Header.cshtml")
+    }
+
+    <div id="ubi">
+        @RenderPage("~/Shared/_Informe.cshtml")
+    </div>
+
+
+    <h1>@PageData["titulo"]</h1>
+    @RenderBody()
+</body>
+</html>
